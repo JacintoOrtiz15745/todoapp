@@ -1,0 +1,19 @@
+<% if current_user.present?%>
+<%= link_to 'My lists', controller: 'lists' %>
+
+<% else %>
+<section class="hero is-link is-large">
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+  <div class="hero-body">
+    <div class="container">
+
+      <h2 class="subtitle is-1 has-text-centered" id="welcome">
+        Welcome to TODO app!
+      </h2>
+    </div>
+  </div>
+</section>
+<% end %>
